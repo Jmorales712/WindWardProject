@@ -28,6 +28,4 @@ public class ClickAround extends base.BaseTest {
         page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("resources").setExact(true)).click();
 
     }
-
-
 }
