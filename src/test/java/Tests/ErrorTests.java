@@ -39,10 +39,10 @@ public void validateErrors(){
         home.singInCta();
 
                 PlaywrightAssertions.
-                        assertThat(page.getByText("Please enter User Name"));
+                        assertThat(page.getByText("Please enter User Name")).isVisible();
 
                 PlaywrightAssertions.
-                        assertThat(page.getByText("Please enter Password"));
+                        assertThat(page.getByText("Please enter Password")).isVisible();
 
                 page.screenshot
                         (new Page.ScreenshotOptions().setPath
@@ -65,7 +65,7 @@ public void validateErrors(){
         home.signUpCta();
         home.registerYourAccount();
 
-        PlaywrightAssertions.assertThat(page.getByText("Agent Number is required."));
+        PlaywrightAssertions.assertThat(page.getByText("Agent Number is required.")).isVisible();
 
 
         }
@@ -79,9 +79,8 @@ public void validateErrors(){
             home.registerYourAccount();
             home.taxId();
 
-                PlaywrightAssertions.assertThat(page.getByText("Tax ID (FEIN) is required."));
-
+                PlaywrightAssertions.assertThat(page.getByText("Tax ID (FEIN) is required.")).isVisible();
 
 
         }
-}
+    }

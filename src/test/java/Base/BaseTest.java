@@ -21,7 +21,7 @@ public class BaseTest {
                 = playwright.chromium().launch
                 (new BrowserType.LaunchOptions().
                         setHeadless(false).
-                        setSlowMo(3000).
+                        setSlowMo(500).
                         setArgs(List.of("--disable-blink-features=AutomationControlled")));
         context
                 = browser.newContext();

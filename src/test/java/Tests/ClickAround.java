@@ -20,7 +20,8 @@ public class ClickAround extends base.BaseTest {
     public void validateCondoInsuranceTab(){
         Home home = new Home(page);
         home.navigate();
-        page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("A decorative icon describing a condo depicted by a building Condominium")).click();
+        new Locator.ScrollIntoViewIfNeededOptions();
+                page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("A decorative icon describing a condo depicted by a building Condominium")).click();
         page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Decorative icon describing a")).click();
         page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("View all faqs")).click();
         page.locator("label").filter(new Locator.FilterOptions().setHasText("Condo")).locator("div").click();
